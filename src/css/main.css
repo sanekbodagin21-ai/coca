@@ -1,3 +1,6 @@
 body {
+    position: relative;
+    display: flex;
+    width: 50px;
     background-color: aqua;
 }
