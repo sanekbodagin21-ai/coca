@@ -1,4 +1,4 @@
-@use './font-face';
-@use './flex';
-@use './media';
-@use './burger';
+@forward './font-face';
+@forward './flex';
+@forward './media';
+@forward './burger';
