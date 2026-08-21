@@ -9,7 +9,7 @@
     }
 
     @include mobile {
-        min-height: calc(100dvh - 128px);
+        min-height: calc(100dvh - 109px);
     }
 
     &::before {
@@ -253,7 +253,7 @@
         }
 
         &-body {
-            &-th {
+            &-td {
                 &:nth-child(1) {
                     padding-right: 80px;
                 }

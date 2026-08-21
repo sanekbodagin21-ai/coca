@@ -7,6 +7,18 @@
 
     &-h2 {
         font-size: 56px;
+
+        @include tablet {
+            font-size: 46px;
+        }
+
+        @include mobile {
+            font-size: 36px;
+        }
+
+        @include small-mobile {
+            font-size: 30px;
+        }
     }
 
     &-h3 {
@@ -19,6 +31,18 @@
 
     &-h5 {
         font-size: 32px;
+
+        @include tablet {
+            font-size: 28px;
+        }
+
+        @include mobile {
+            font-style: 24px;
+        }
+
+        @include small-mobile {
+            font-size: 22px;
+        }
     }
 
     &-h1,
@@ -43,7 +67,7 @@
 
             @include tablet {
                 font-size: 28px;
-            } 
+            }
 
             @include small-tablet {
                 font-size: 24px;
@@ -73,6 +97,10 @@
 
         &-medium {
             font-size: 18px;
+
+            @include mobile {
+                font-size: 16px;
+            }
         }
 
         &-default {
