@@ -15,11 +15,13 @@ html {
 .body {
     position: relative;
     overflow-x: hidden;
+    height: 1000vh;
     color: var(--neutral-color-100);
     background-color: var(--neutral-color-10);
 
+
     &--fixed {
-    overflow-y: hidden;
+        overflow-y: hidden;
     }
 }
 
@@ -70,7 +72,7 @@ label {
 .container {
     margin: 0 auto;
     padding: 0 var(--container-padding);
-  max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+    max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
 
 .hidden {

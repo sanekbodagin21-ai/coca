@@ -1,22 +1,24 @@
+@use '../mixins' as *;
+
 .heading {
     &-h1 {
-    font-size: 72px;
+        font-size: 72px;
     }
 
     &-h2 {
-    font-size: 56px;
+        font-size: 56px;
     }
 
     &-h3 {
-    font-size: 40px;
+        font-size: 40px;
     }
 
     &-h4 {
-    font-size: 36px;
+        font-size: 36px;
     }
 
     &-h5 {
-    font-size: 32px;
+        font-size: 32px;
     }
 
     &-h1,
@@ -24,26 +26,61 @@
     &-h3,
     &-h4,
     &-h5 {
-    line-height: 120%;
+        line-height: 120%;
     }
 }
 
 .text {
     &-p {
-    &-large {
-        font-size: 24px;
-    }
+        &-subtitle {
+            @include flex-all-center;
+            gap: 27px;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 131%;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
 
-    &-medium {
-        font-size: 18px;
-    }
+            @include tablet {
+                font-size: 28px;
+            } 
 
-    &-default {
-        font-size: 16px;
-    }
+            @include small-tablet {
+                font-size: 24px;
+            }
 
-    &-small {
-        font-size: 14px;
-    }
+            @include small-mobile {
+                font-size: 20px;
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 176px;
+                height: 1px;
+                background-color: var(--neutral-color-100);
+                transform: translateY(-20px);
+
+                @include mini-desktop {
+                    display: none;
+                }
+            }
+        }
+
+        &-large {
+            font-size: 24px;
+        }
+
+        &-medium {
+            font-size: 18px;
+        }
+
+        &-default {
+            font-size: 16px;
+        }
+
+        &-small {
+            font-size: 14px;
+        }
     }
 }
