@@ -51,8 +51,13 @@
     &__item {
         max-width: 453px;
 
-        &-icon {
+        &-icon,
+        &-title {
             margin-bottom: 24px;
+
+            @include tablet {
+                margin-bottom: 18px;
+            }
         }
 
         &-title {
@@ -63,18 +68,10 @@
             color: #fff;
 
             @include mobile {
-                min-width: 320px;
+                max-width: 320px;
             }
         }
 
-        &-icon,
-        &-title {
-            margin-bottom: 24px;
-
-            @include tablet {
-                margin-bottom: 18px;
-            }
-        }
 
         &-description {
             font-weight: 500;
