@@ -8,6 +8,11 @@
 
         @include mobile {
             padding-top: 86px;
+            padding-bottom: 61px;
+        }
+
+        @include small-mobile {
+            padding-bottom: 41px;
         }
     }
 
@@ -52,6 +57,10 @@
             height: 80px;
             background-color: #fff;
             transform: translateX(-50%);
+
+            @include mini-desktop {
+                top: 90px;
+            }
 
             @include tablet {
                 display: none;
