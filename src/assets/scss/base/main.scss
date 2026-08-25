@@ -4,6 +4,14 @@ html {
     font-weight: 400;
     font-size: 16px;
     scroll-behavior: smooth !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
 }
 
 *,
@@ -15,7 +23,6 @@ html {
 .body {
     position: relative;
     overflow-x: hidden;
-    height: 1000vh;
     color: var(--neutral-color-100);
     background-color: var(--neutral-color-10);
 
