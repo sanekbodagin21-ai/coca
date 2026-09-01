@@ -1,0 +1,116 @@
+@use '../../mixins' as *;
+
+.hero {
+    &__container {
+        border-bottom: 1px solid var(--neutral-color-30);
+        padding: 106px 0 165px;
+
+        @include tablet {
+            padding-bottom: 105px;
+        }
+
+        @include mobile {
+            padding-bottom: 65px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-end;
+
+        @include small-tablet {
+            gap: 48px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-info {
+            @include small-tablet {
+                @include flex-align-center;
+                flex-direction: column;
+            }
+
+            &-title {
+                margin-bottom: 118px;
+                font-weight: 700;
+                letter-spacing: -2px;
+                color: var(--neutral-color-100);
+
+                @include small-tablet {
+                    margin-bottom: 88px;
+                    text-align: center;
+                }
+            }
+
+            &-description {
+                margin-bottom: 135px;
+                max-width: 838px;
+
+                &::before {
+                    transform: translateY(-84px);
+                }
+
+                @include mini-desktop {
+                    justify-content: start;
+                }
+
+                @include small-tablet {
+                    text-align: center;
+                }
+            }
+        }
+
+        &-img {
+            transform: translateY(-150px);
+
+            & svg {
+                & rect, 
+                & path,
+                & circle {
+                    fill: var(--neutral-color-100);
+                }
+            }
+
+            @include mobile {
+                width: 136px;
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+
+        &-buttons {
+            left: 42%;
+
+            @include mini-desktop {
+                left: 50%;
+            }
+        }
+    }
+
+    &__slide {
+        max-width: 502px;
+
+        &-title {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            line-height: 150%;
+            color: var(--neutral-color-100);
+        }
+
+        &-description {
+            margin-bottom: 32px;
+            font-weight: 500;
+            line-height: 32px;
+            color: var(--neutral-color-150);
+        }
+
+        &-button {
+            padding: 16px 32px;
+            color: var(--neutral-color-10);
+            background-color: var(--neutral-color-100);
+        }
+    }
+}

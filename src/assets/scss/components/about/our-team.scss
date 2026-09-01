@@ -1,0 +1,205 @@
+@use '../../mixins' as *;
+
+.our-team {
+    padding: 160px 0 165px;
+
+    @include tablet {
+            padding: 100px 0 105px;
+        }
+
+    @include mobile {
+            padding: 80px 0 85px;
+        }
+
+    &__title {
+        margin-bottom: 24px;
+        max-width: 703px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        color: var(--neutral-color-100);
+
+        @include small-tablet {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+    }
+
+    &__description {
+        margin-bottom: 80px;
+        max-width: 534px;
+        font-weight: 500;
+        line-height: 32px;
+        color: var(--neutral-color-150);
+
+        @include small-tablet {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+    }
+
+    &__slider {
+        margin-bottom: 100px;
+
+        @include tablet {
+            margin-bottom: 80px;
+        }
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+
+        @include small-tablet {
+            max-width: 379px;
+        }
+
+        &-buttons {
+            left: 33%;
+
+            @include tablet {
+                left: 50%;
+            }
+
+            @include small-tablet {
+                top: 71%;
+            }
+
+            @include small-mobile {
+                top: 2%;
+                left: 15%;
+            }
+        }
+    }
+
+    &__slide {
+        max-width: 379px;
+    }
+
+    &__card {
+        &-img {
+            margin-bottom: 16px;
+        }
+
+        &-info {
+            @include flex-justify-between;
+        }
+
+        &-bio {
+            &-name {
+                font-weight: 600;
+                line-height: 150%;
+                color: var(--neutral-color-100);
+            }
+
+            &-profession {
+                font-weight: 500;
+                line-height: 150%;
+                color: var(--neutral-color-150);
+            }
+        }
+
+        &-socials {
+            &-list {
+                @include flex-justify-content;
+                gap: 8px;
+            }
+
+            &-item {
+                display: flex;
+            }
+
+            &-link {
+                @include flex-all-center;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                background-color: var(--neutral-color-30);
+                transition: background-color var(--transition);
+
+                &:hover {
+                    background-color: var(--neutral-color-40);
+                }
+            }
+        }
+    }
+
+    &__cta-section {
+        @include flex-justify-between;
+        gap: 71px;
+
+        @include tablet {
+            gap: 41px;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        @include small-tablet {
+            align-items: center;
+        }
+
+        &-title {
+            max-width: 626px;
+
+            @include small-desktop {
+                max-width: 450px;
+            }
+
+            @include tablet {
+                margin-bottom: 0;
+                max-width: 534px;
+                text-align: end;
+            }
+
+            @include small-tablet {
+                max-width: 703px;
+                text-align: center;
+            }
+            
+        }
+
+        &-description {
+            margin-bottom: 24px;
+            max-width: 506px;
+
+            @include small-desktop {
+                max-width: 400px;
+            }
+
+            @include tablet {
+                margin-bottom: 41px;
+                max-width: 534px;
+                text-align: end;
+            }
+
+            @include small-tablet {
+                text-align: center;
+            }
+        }
+
+        &-button {
+            @include flex-align-center;
+            gap: 3px;
+            font-weight: 600;
+            line-height: 24px;
+            color: var(--neutral-color-100);
+            transition: color var(--transition);
+
+            @include tablet {
+                justify-content: end;
+            }
+
+            @include small-tablet {
+                justify-content: center;
+            }
+
+            &:hover &-icon {
+                transform: translateX(5px);
+            }
+
+            &-icon {
+                transition: transform var(--transition);
+            }
+        }
+    }
+}

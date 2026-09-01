@@ -4,7 +4,7 @@
     position: relative;
     
     &::before {
-        top: 50;
+        top: 50px;
         left: 181px;
         width: 551px;
         height: 551px;
@@ -53,5 +53,20 @@
         z-index: var(--z-index-0);
         display: inline-block;
         border-radius: 50%;
+    }
+
+    &--about::before {
+        top: 1000px;
+        left: 0;
+
+        @include small-tablet {
+            top: 1200px;
+        }
+    }
+
+    &--about::after {
+        bottom: 900px;
+
+
     }
 }

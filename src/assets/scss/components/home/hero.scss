@@ -57,6 +57,10 @@
 
     &__description {
         margin-bottom: 69px;
+
+        &::before {
+            transform: translateY(-60px);
+        }
     }
 
     &__form {

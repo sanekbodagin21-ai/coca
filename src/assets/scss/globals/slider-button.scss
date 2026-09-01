@@ -1,0 +1,53 @@
+@use '../mixins' as *;
+
+.slider {
+    &__buttons {
+        @include flex-all-center;
+        position: absolute;
+        top: 126px;
+        z-index: var(--z-index-2);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        transform: translateX(-50%);
+    }
+
+    &__button {
+        position: relative;
+        width: 60px;
+        height: 60px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            border-bottom: 4px solid #1d1e25;
+            border-left: 4px solid #1d1e25;
+            border-radius: 3px;
+            width: 16px;
+            height: 16px;
+            transition:
+                width var(--transition),
+                height var(--transition);
+        }
+
+        &:hover {
+            &::after {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &-prev::after {
+            transform: rotate(45deg);
+        }
+
+        &-next::after {
+            margin-left: -14px;
+            transform: rotate(-135deg);
+        }
+    }
+}
