@@ -17,7 +17,8 @@ export default defineConfig({
                 main: './src/index.html',
                 about: './src/about.html',
                 pricing: './src/pricing.html',
-                contact: './src/contact.html'
+                contact: './src/contact.html',
+                blog: './src/blog.html'
             },
         },
     },

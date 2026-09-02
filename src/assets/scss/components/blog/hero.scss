@@ -1,0 +1,221 @@
+@use '../../mixins' as *;
+
+.hero {
+    padding: 95px 0 168px;
+
+    @include tablet {
+        padding: 75px 0 148px;
+    }
+
+    @include mobile {
+        padding: 55px 0 128px;
+    }
+
+    &__container {
+        &::before {
+            top: -10%;
+            left: -10%;
+        }
+
+        &::after {
+            top: 20%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 53px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        color: var(--neutral-color-100);
+
+        @include tablet {
+            margin-bottom: 33px;
+        }
+
+        @include mobile {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__description {
+        justify-content: start;
+        margin-bottom: 128px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -1px;
+        color: var(--neutral-color-100);
+
+        @include tablet {
+            margin-bottom: 108px;
+        }
+
+        @include mobile {
+            margin-bottom: 88px;
+        }
+
+        &::before {
+            transform: translateY(-40px);
+        }
+    }
+
+    &__categories {
+        &-list {
+            display: flex;
+            gap: 44px;
+            margin-bottom: 80px;
+
+            @include tablet {
+                gap: 10px;
+                margin-bottom: 60px;
+            }
+
+            @include small-tablet {
+                flex-wrap: wrap;
+                max-width: 500px;
+            }
+
+            @include mobile {
+                margin-bottom: 40px;
+                max-width: 400px;
+            }
+
+            @include small-mobile {
+                max-width: 250px;
+            }
+        }
+
+        &-button {
+            position: relative;
+            font-weight: 500;
+            line-height: 24px;
+            color: var(--neutral-color-150);
+            transition: color var(--transition);
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+                left: 0;
+                height: 1px;
+                background-color: var(--neutral-color-100);
+                opacity: 0;
+                visibility: hidden;
+                transition:
+                    opacity var(--transition),
+                    visibility var(--transition);
+            }
+
+            &--active {
+                color: var(--neutral-color-100);
+
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &:hover {
+                color: var(--neutral-color-100);
+
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__slider {
+        &-buttons {
+            top: 27%;
+            left: 44%;
+
+            @include mini-desktop {
+                left: 53%;
+            }
+
+            @include tablet {
+                left: 50%;
+            }
+
+            @include small-tablet {
+                top: 62%;
+                left: 92%;
+            }
+
+            @include mobile {
+                top: 10px;
+                left: 15%;
+            }
+        }
+    }
+
+    &__card {
+        max-width: 515px;
+
+        @include small-tablet {
+            min-width: 100%;
+        }
+
+        &-img {
+            margin-bottom: 16px;
+            width: 515px;
+            height: 428px;
+
+            @include tablet {
+                margin-bottom: 14px;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-date {
+            margin-bottom: 24px;
+            font-weight: 400;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: -1px;
+            color: var(--neutral-color-100);
+
+            @include tablet {
+                margin-bottom: 12px;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-description {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: var(--neutral-color-150);
+
+            @include tablet {
+                font-size: 16px;
+            }
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+}
