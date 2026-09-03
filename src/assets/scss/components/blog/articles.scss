@@ -1,0 +1,120 @@
+@use '../../mixins' as *;
+
+.articles {
+    padding: 160px 0;
+
+    @include tablet {
+        padding: 130px 0;
+    }
+
+    @include mobile {
+        padding: 100px 0 0;
+    }
+
+    &__head {
+        @include flex-justify-between;
+        margin-bottom: 80px;
+
+        @include tablet {
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            gap: 16px;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        color: var(--neutral-color-100);
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description {
+        max-width: 435px;
+        font-weight: 500;
+        line-height: 32px;
+        color: var(--neutral-color-150);
+    }
+
+    &__card {
+        max-width: 406px;
+
+        @include mobile {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+        }
+
+        &-img {
+            margin-bottom: 24px;
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-bottom: 16px;
+                width: 50%;
+            }
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            color: var(--neutral-color-100);
+
+            @include tablet {
+                margin-bottom: 13px;
+            }
+
+            @include small-tablet {
+                max-width: 500px;
+                text-align: center;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-description {
+            margin-bottom: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            color: var(--neutral-color-150);
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
+
+            @include small-tablet {
+                max-width: 500px;
+                text-align: center;
+            }
+
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-button {
+            border: 1px solid var(--neutral-color-40);
+            padding: 16px 32px;
+            color: var(--neutral-color-100);
+        }
+    }
+}

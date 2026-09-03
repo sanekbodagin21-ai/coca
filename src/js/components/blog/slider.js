@@ -92,12 +92,10 @@ export const useBlogHeroSlider = () => {
             cat.addEventListener('click', function () {
                 const category = this.dataset.category;
 
-                // Убираем активный класс у всех кнопок
                 categories.forEach((c) => {
                     c.classList.remove('hero__categories-button--active');
                 });
                 
-                // Добавляем активный класс текущей кнопке
                 this.classList.add('hero__categories-button--active');
 
                 renderSlides(category);
@@ -109,7 +107,6 @@ export const useBlogHeroSlider = () => {
         initSwiper();
         setupFilters();
 
-        // Устанавливаем "all" как активную по умолчанию
         const allCategory = document.querySelector(
             '.hero__categories-button[data-category="all"]'
         );
@@ -124,4 +121,25 @@ export const useBlogHeroSlider = () => {
         getSwiper: () => swiperInstance,
         renderSlides,
     };
+};
+
+export const useBlogArticlesSlider = () => {
+    new Swiper('.articles__slider', {
+        slidesPerView:1,
+        spaceBetween: 32,
+        loop: true,
+        modules: [Navigation],
+        navigation: {
+            nextEl: '.slider__button-other--next',
+            prevEl: '.slider__button-other--prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            993: {
+                slidesPerView: 3,
+            },
+        },
+    });
 };
