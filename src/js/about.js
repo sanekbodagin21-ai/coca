@@ -5,8 +5,10 @@ import {useTheme} from './components/theme';
 import {useBurger} from './components/burger';
 import {useAboutHeroSlider} from './components/about/slider';
 import {useAboutTeamSlider} from './components/about/slider';
+import {useFooterMenu} from './components/footer-menu';
 
 useTheme();
 useBurger();
 useAboutHeroSlider();
 useAboutTeamSlider();
+useFooterMenu();

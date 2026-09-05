@@ -148,7 +148,50 @@
             line-height: 24px;
 
             @include mobile {
+                position: relative;
+                display: flex;
+                gap: 15px;
+                align-items: center;
                 min-width: 143px;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    border-right: 3px solid #fff;
+                    border-bottom: 3px solid #fff;
+                    width: 12px;
+                    height: 12px;
+                    transform: rotate(45deg);
+                    transition: transform var(--transition);
+                }
+
+                &.is-active {
+                    &::after {
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+
+            @include small-mobile {
+                justify-content: center;
+            }
+        }
+    }
+
+    &__sublist {
+        @include mobile {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition:
+                max-height var(--transition),
+                opacity var(--transition),
+                margin-top var(--transition);
+
+            &.is-open {
+                margin-top: 16px;
+                max-height: 500px;
+                opacity: 1;
             }
         }
     }
