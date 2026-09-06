@@ -53,8 +53,9 @@
             }
 
             @include mobile {
+                margin-right: 30px;
                 border: none;
-                padding: 0 30px 0 0;
+                padding: 0;
                 min-width: 0;
                 max-width: 380px;
             }
@@ -155,6 +156,10 @@
             padding: 16px 32px;
             color: #fff;
             background-color: #1d1e25;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
         }
 
         &-success {
