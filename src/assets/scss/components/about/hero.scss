@@ -86,11 +86,27 @@
             @include mini-desktop {
                 left: 50%;
             }
+
+            @include small-tablet {
+                top: 4px;
+                left: 10%;
+            }
+
+            @include mobile {
+                left: 5%;
+            }
         }
     }
 
     &__slide {
         max-width: 502px;
+
+        @include small-tablet {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+        }
 
         &-title {
             margin-top: 24px;
@@ -105,6 +121,11 @@
             font-weight: 500;
             line-height: 32px;
             color: var(--neutral-color-150);
+
+            @include small-tablet {
+                max-width: 500px;
+                text-align: center;
+            }
         }
 
         &-button {

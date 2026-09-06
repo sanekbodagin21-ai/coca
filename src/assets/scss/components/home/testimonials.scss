@@ -14,7 +14,7 @@
         @include tablet {
             gap: 24px;
             flex-direction: column;
-            text-align: center;
+            align-items: start;
         }
 
         @include mobile {
@@ -78,9 +78,23 @@
 
     &__slider {
         max-width: 898px;
+
+        &-buttons {
+            @include flex-align-center;
+            gap: 16px;
+            justify-content: flex-end;
+            transform: translateY(-40px);
+
+            @include mini-desktop {
+                transform: translateY(5px);
+            }
+        }
     }
 
     &__comment {
+        display: flex;
+        flex-direction: column;
+
         &-text {
             margin-bottom: 40px;
             font-weight: 500;
@@ -110,50 +124,6 @@
                 line-height: 26px;
                 color: var(--neutral-color-150);
             }
-        }
-    }
-
-    &__buttons {
-        @include flex-align-center;
-        gap: 16px;
-        justify-content: flex-end;
-        transform: translateY(-40px);
-
-        @include mini-desktop {
-            transform: translate(5px);
-        }
-    }
-
-    &__button {
-        @include flex-all-center;
-        border: 1px solid var(--neutral-color-40);
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        transition:
-        background-color var(--transition),
-        border-color var(--transition);
-
-        @include small-mobile {
-            width: 40px;
-            height: 40px;
-        }
-
-        & svg path {
-            transform: fill var(--transition);
-        }
-
-        &:hover {
-            border-color: var(--neutral-color-100);
-            background-color: var(--neutral-color-100);
-
-            & svg path {
-                fill: var(--neutral-color-10);
-            }
-        }
-
-        &--prev {
-            transform: rotate(-180deg);
         }
     }
 }

@@ -8,7 +8,7 @@
     }
 
     @include mobile {
-        padding: 100px 0 0;
+        padding: 100px 0 40px;
     }
 
     &__head {
@@ -50,6 +50,8 @@
 
     &__card {
         max-width: 406px;
+
+        
 
         @include mobile {
             display: flex !important;

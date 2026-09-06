@@ -116,6 +116,14 @@
             line-height: 24px;
             color: #1d1e25;
 
+            &--invalid {
+                border-color: var(--primary-color-70);
+
+                &:focus {
+                    outline-color: var(--primary-color-70);
+                }
+            }
+
             &-textarea {
                 outline: none;
                 height: 134px;
@@ -131,10 +139,33 @@
             }
         }
 
+        &-error {
+            display: none;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 16px;
+            color: var(--primary-color-70);
+
+            &--visible {
+                display: block;
+            }
+        }
+
         &-button {
             padding: 16px 32px;
             color: #fff;
             background-color: #1d1e25;
+        }
+
+        &-success {
+            display: none;
+            margin-top: 16px;
+            line-height: 20px;
+            color: var(--primary-color-30);
+
+            &--visible {
+                display: block;
+            }
         }
     }
 
@@ -142,5 +173,17 @@
         @include small-tablet {
             display: none;
         }
+    }
+}
+
+.iti {
+    &__country {
+        &-name {
+            color: #1d1e25;
+        }
+    }
+
+    &__selected-dial-code {
+        color: #1d1e25;
     }
 }

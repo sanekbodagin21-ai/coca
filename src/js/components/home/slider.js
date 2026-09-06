@@ -14,6 +14,11 @@ export const useInsightSlider = () => {
                 centeredSlides: false,
             },
         },
+        modules: [Navigation],
+        navigation: {
+                prevEl: '.insight__slider-button--prev',
+                nextEl: '.insight__slider-button--next',
+            },
     });
 };
 
@@ -28,8 +33,8 @@ export const useTestimonialsSlider = () => {
             spaceBetween: 22,
             loop: true,
             navigation: {
-                prevEl: '.testimonials__button--prev',
-                nextEl: '.testimonials__button--next',
+                prevEl: '.slider__button-other--prev',
+                nextEl: '.slider__button-other--next',
             },
         });
     });

@@ -34,6 +34,18 @@
         @include mobile {
             gap: 36px;
         }
+
+        &-img {
+            position: relative;
+            width: 100%;
+            height: 400px;
+
+            & svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
     &__contact {

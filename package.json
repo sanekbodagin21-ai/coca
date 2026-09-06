@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "intl-tel-input": "^29.2.3",
+    "jsvectormap": "^1.7.0",
     "swiper": "^14.1.0"
   }
 }
